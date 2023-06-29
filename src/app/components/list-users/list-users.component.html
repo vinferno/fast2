@@ -1,0 +1,15 @@
+<p>list-users works!</p>
+{{users$ | async | json}}
+
+<ng-container *ngIf="users$ | async as users" >
+  <ul>
+    <li (click)="selectUserByName(user.name)" *ngFor="let user of users">
+      {{user.name}}
+    </li>
+  </ul>
+</ng-container>
+
+<hr>
+<p>selected user: {{selectedUserName$ | async | json}}</p>
+<hr>
+<p>selected user: {{selectedUser$ | async | json}}</p>

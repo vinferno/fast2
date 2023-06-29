@@ -1,0 +1,10 @@
+
+  <div [ngClass]="{
+    main: !!(selectedUserName$ | async)?.length
+  }">
+  <p [ngStyle]="{'color':  !!(selectedUserName$ | async)?.length ? 'red': 'blue'}">The logged</p>
+    <app-add-user></app-add-user>
+    <app-list-users></app-list-users>
+
+  </div>
+
